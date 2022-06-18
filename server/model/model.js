@@ -1,3 +1,4 @@
+// data validation, processing data, creating mongoscheme etc
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({

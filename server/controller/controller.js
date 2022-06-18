@@ -1,5 +1,7 @@
+// user request and resources from the server 
+// different functions that will send resources to the user
+
 var Userdb = require('../model/model');
-const math=require('math-expression-evaluator')
 
 // create and save new user
 exports.create = (req,res)=>{
@@ -9,36 +11,6 @@ exports.create = (req,res)=>{
         name : req.body.name
         
     })
-    
-    const re = /(?:(?:^|[-+_*/])(?:\s*-?\d+(\.\d+)?(?:[eE][+-]?\d+)?\s*))+$/;
-   
-    if ((user.name).match(/[A-Z]/gi)){
-        user
-        .save(user)
-        .then(data => {
-           
-            res.redirect('/');
-        })
-      
-    }
-    
-     else if((user.name).match(re)){
-
-    
-            user.name=user.name + "=" + math.eval(user.name);
-            user
-            .save(user)
-            .then(data => {
-                res.redirect('/');
-            })
-            .catch(err =>{
-                res.status(500).send({
-                    message : err.message || "Some error occurred while creating a create operation"
-                });
-            });
-       
-        }
-        else{
             user
             .save(user)
             .then(data => {
@@ -52,9 +24,9 @@ exports.create = (req,res)=>{
             });
         });
     }
-//}
+
    
-}
+
 
 // retrieve and return all users/ retrive and return a single user
 exports.find = (req, res)=>{
