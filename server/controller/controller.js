@@ -3,7 +3,7 @@
 
 var Userdb = require('../model/model');
 
-// create and save new user
+// create and save new entry
 exports.create = (req,res)=>{
 
     // new user
@@ -61,6 +61,7 @@ exports.find = (req, res)=>{
 
 
 // Delete a user with specified user id in the request
+// Delete  Data
 exports.delete = (req, res)=>{
     const id = req.params.id;
 

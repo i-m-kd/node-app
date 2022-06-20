@@ -16,9 +16,6 @@ $("#update_user").submit(function(event){
         "data" : data
     }
 
-    $.ajax(request).done(function(response){
-        alert("Data Updated Successfully!");
-    })
 
 })
 

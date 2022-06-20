@@ -6,7 +6,6 @@ var schema = new mongoose.Schema({
         type : String,
         required: true
     }
- 
 })
 
 const Userdb = mongoose.model('userdb', schema);
