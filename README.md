@@ -1,4 +1,4 @@
-# CRUD_Application_Node
+# Node_Application
 A TODO node application with express and mongodb.
 
 #### To Run this project Clone it and install modules using
